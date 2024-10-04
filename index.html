@@ -183,6 +183,40 @@
                 align-items: center;
             }
         }
+        #living-data-pod {
+            padding: 2rem 0;
+        }
+        .pod-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .pod-text, .pod-image {
+            width: 100%;
+            padding: 1rem;
+        }
+        .pod-text p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+        .pod-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        @media (min-width: 800px) {
+            .pod-container {
+                flex-direction: row;
+                align-items: stretch;
+            }
+            .pod-text, .pod-image {
+                width: 50%;
+            }
+            .pod-text {
+                display: flex;
+                align-items: center;
+            }
+        }
     </style>
 </head>
 <body>
@@ -210,6 +244,16 @@
                 </div>
                 <div class="story-image">
                     <img src="https://assets.simpleviewinc.com/simpleview/image/upload/c_limit,h_1200,q_75,w_1200/v1/clients/cannonbeachor/Haystack_for_SpinlerCreative_1_of_1_3_88877847-9ca6-4f6b-b21a-90028a750ab9.jpg" alt="Haystack Rock">
+                </div>
+            </div>
+        </section>
+        <section id="living-data-pod">
+            <div class="pod-container">
+                <div class="pod-image">
+                    <img src="https://images.squarespace-cdn.com/content/v1/5ee2e063811fd621570b4704/b119aef3-3876-4ffe-981f-5746ee5e52f7/living+data+pod+draft+5-01.jpg" alt="Living Data Pod">
+                </div>
+                <div class="pod-text">
+                    <p>The living data pod is a system of tracking the movement of life.</p>
                 </div>
             </div>
         </section>
