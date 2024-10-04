@@ -5,6 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Mobile-Friendly Website</title>
     <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --header-bg-color: #4CAF50;
+            --header-text-color: #ffffff;
+            --nav-bg-color: #333333;
+            --nav-text-color: #ffffff;
+            --nav-hover-color: #4CAF50;
+            --footer-bg-color: #333333;
+            --footer-text-color: #ffffff;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #333333;
+                --text-color: #ffffff;
+                --header-bg-color: #2d682f;
+                --header-text-color: #ffffff;
+                --nav-bg-color: #1a1a1a;
+                --nav-text-color: #ffffff;
+                --nav-hover-color: #4CAF50;
+                --footer-bg-color: #1a1a1a;
+                --footer-text-color: #ffffff;
+            }
+        }
+
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
@@ -13,10 +39,12 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
+            background-color: var(--bg-color);
+            color: var(--text-color);
         }
         header {
-            background-color: #4CAF50;
-            color: white;
+            background-color: var(--header-bg-color);
+            color: var(--header-text-color);
             text-align: center;
             padding: 1rem;
             position: sticky;
@@ -25,8 +53,8 @@
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         nav {
-            background-color: #333;
-            color: white;
+            background-color: var(--nav-bg-color);
+            color: var(--nav-text-color);
             padding: 0.5rem;
         }
         nav ul {
@@ -40,12 +68,12 @@
             margin: 0 10px;
         }
         nav ul li a {
-            color: white;
+            color: var(--nav-text-color);
             text-decoration: none;
             transition: color 0.3s ease;
         }
         nav ul li a:hover {
-            color: #4CAF50;
+            color: var(--nav-hover-color);
         }
         main {
             flex: 1;
@@ -54,8 +82,8 @@
             margin: 0 auto;
         }
         footer {
-            background-color: #333;
-            color: white;
+            background-color: var(--footer-bg-color);
+            color: var(--footer-text-color);
             text-align: center;
             padding: 2rem;
             margin-top: auto;
@@ -69,7 +97,7 @@
             margin: 10px;
         }
         .social-icons a {
-            color: white;
+            color: var(--footer-text-color);
             text-decoration: none;
             margin: 0 10px;
             font-size: 1.2em;
