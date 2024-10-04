@@ -150,13 +150,15 @@
             border: none;
         }
         #haystack-story {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
             padding: 2rem 0;
         }
+        .story-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
         .story-text, .story-image {
-            flex: 1 1 100%;
+            width: 100%;
             padding: 1rem;
         }
         .story-text p {
@@ -168,9 +170,17 @@
             height: auto;
             display: block;
         }
-        @media (min-width: 768px) {
+        @media (min-width: 800px) {
+            .story-container {
+                flex-direction: row;
+                align-items: stretch;
+            }
             .story-text, .story-image {
-                flex: 1 1 50%;
+                width: 50%;
+            }
+            .story-text {
+                display: flex;
+                align-items: center;
             }
         }
     </style>
@@ -194,11 +204,13 @@
             </div>
         </section>
         <section id="haystack-story">
-            <div class="story-text">
-                <p>Haystack Rock has been an indigenous tribal meeting place for many centuries.</p>
-            </div>
-            <div class="story-image">
-                <img src="https://assets.simpleviewinc.com/simpleview/image/upload/c_limit,h_1200,q_75,w_1200/v1/clients/cannonbeachor/Haystack_for_SpinlerCreative_1_of_1_3_88877847-9ca6-4f6b-b21a-90028a750ab9.jpg" alt="Haystack Rock">
+            <div class="story-container">
+                <div class="story-text">
+                    <p>Haystack Rock has been an indigenous tribal meeting place for many centuries.</p>
+                </div>
+                <div class="story-image">
+                    <img src="https://assets.simpleviewinc.com/simpleview/image/upload/c_limit,h_1200,q_75,w_1200/v1/clients/cannonbeachor/Haystack_for_SpinlerCreative_1_of_1_3_88877847-9ca6-4f6b-b21a-90028a750ab9.jpg" alt="Haystack Rock">
+                </div>
             </div>
         </section>
     </main>
