@@ -108,17 +108,18 @@
         }
         .footer-content {
             display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        .footer-left {
+            display: flex;
+            gap: 20px;
         }
         .footer-section {
             margin: 10px;
         }
-        .social-icons a {
-            color: var(--footer-text-color);
-            text-decoration: none;
-            margin: 0 10px;
-            font-size: 1.2em;
+        .footer-section p {
+            margin: 0;
         }
         @media (max-width: 600px) {
             nav ul {
@@ -130,7 +131,11 @@
             }
             .footer-content {
                 flex-direction: column;
-                align-items: center;
+                align-items: flex-start;
+            }
+            .footer-left {
+                flex-direction: column;
+                gap: 10px;
             }
         }
         .video-container {
@@ -270,25 +275,20 @@
     </main>
     <footer>
         <div class="footer-content">
-            <div class="footer-section">
-                <h3>About Us</h3>
-                <p>We create responsive and user-friendly web experiences.</p>
+            <div class="footer-left">
+                <div class="footer-section">
+                    <p><strong>Foundation</strong></p>
+                </div>
+                <div class="footer-section">
+                    <p><strong>Contribute</strong></p>
+                </div>
             </div>
-            <div class="footer-section">
-                <h3>Contact</h3>
-                <p>Email: contact@example.com</p>
-                <p>Phone: (123) 456-7890</p>
-            </div>
-            <div class="footer-section">
-                <h3>Follow Us</h3>
-                <div class="social-icons">
-                    <a href="#" title="Facebook">FB</a>
-                    <a href="#" title="Twitter">TW</a>
-                    <a href="#" title="Instagram">IG</a>
+            <div class="footer-right">
+                <div class="footer-section">
+                    <p><strong>Stay up to date</strong></p>
                 </div>
             </div>
         </div>
-        <p>&copy; 2024 Simple Mobile-Friendly Website. All rights reserved.</p>
     </footer>
 </body>
 </html>
