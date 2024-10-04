@@ -134,6 +134,20 @@
                 align-items: center;
             }
         }
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            overflow: hidden;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
     </style>
 </head>
 <body>
@@ -149,17 +163,10 @@
         <button class="donate-button">Donate</button>
     </header>
     <main>
-        <section id="home">
-            <h2>Home</h2>
-            <p>Welcome to our simple, mobile-friendly website. This site is designed to look great on both desktop and mobile devices.</p>
-        </section>
-        <section id="about">
-            <h2>About</h2>
-            <p>We are a company dedicated to creating responsive and user-friendly web experiences.</p>
-        </section>
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Get in touch with us at: contact@example.com</p>
+        <section id="video-section">
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/jgm58cbu0kw?autoplay=1&mute=1&loop=1&playlist=jgm58cbu0kw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
         </section>
     </main>
     <footer>
