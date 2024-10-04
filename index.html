@@ -8,8 +8,8 @@
         :root {
             --bg-color: #ffffff;
             --text-color: #333333;
-            --header-bg-color: #4CAF50;
-            --header-text-color: #ffffff;
+            --header-bg-color: #ffffff;
+            --header-text-color: #333333;
             --nav-bg-color: #333333;
             --nav-text-color: #ffffff;
             --nav-hover-color: #4CAF50;
@@ -21,7 +21,7 @@
             :root {
                 --bg-color: #333333;
                 --text-color: #ffffff;
-                --header-bg-color: #2d682f;
+                --header-bg-color: #333333;
                 --header-text-color: #ffffff;
                 --nav-bg-color: #1a1a1a;
                 --nav-text-color: #ffffff;
@@ -53,6 +53,11 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        header:hover {
+            background-color: var(--text-color);
+            color: var(--bg-color);
         }
         .donate-button {
             background-color: var(--nav-hover-color);
