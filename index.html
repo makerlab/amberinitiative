@@ -137,6 +137,19 @@
         .footer-section ul li a:hover {
             color: var(--nav-hover-color);
         }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        .social-links a {
+            font-size: 24px;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+        .social-links a:hover {
+            transform: scale(1.2);
+        }
         @media (max-width: 600px) {
             nav ul {
                 flex-direction: column;
@@ -309,7 +322,13 @@
             </div>
             <div class="footer-right">
                 <div class="footer-section">
-                    <p><strong>Stay up to date</strong></p>
+                    <p><strong>Contact us</strong></p>
+                    <div class="social-links">
+                        <a href="https://twitter.com/amberinitiative" target="_blank" rel="noopener noreferrer">🐦</a>
+                        <a href="https://instagram.com/amberinitiative" target="_blank" rel="noopener noreferrer">📷</a>
+                        <a href="https://youtube.com/amberinitiative" target="_blank" rel="noopener noreferrer">▶️</a>
+                        <a href="https://vimeo.com/amberinitiative" target="_blank" rel="noopener noreferrer">🎬</a>
+                    </div>
                 </div>
             </div>
         </div>
