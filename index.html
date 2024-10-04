@@ -149,6 +149,30 @@
             height: 100%;
             border: none;
         }
+        #haystack-story {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            padding: 2rem 0;
+        }
+        .story-text, .story-image {
+            flex: 1 1 100%;
+            padding: 1rem;
+        }
+        .story-text p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+        .story-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        @media (min-width: 768px) {
+            .story-text, .story-image {
+                flex: 1 1 50%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -167,6 +191,14 @@
         <section id="video-section">
             <div class="video-container">
                 <iframe src="https://www.youtube.com/embed/jgm58cbu0kw?autoplay=1&mute=1&loop=1&playlist=jgm58cbu0kw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+        </section>
+        <section id="haystack-story">
+            <div class="story-text">
+                <p>Haystack Rock has been an indigenous tribal meeting place for many centuries.</p>
+            </div>
+            <div class="story-image">
+                <img src="https://assets.simpleviewinc.com/simpleview/image/upload/c_limit,h_1200,q_75,w_1200/v1/clients/cannonbeachor/Haystack_for_SpinlerCreative_1_of_1_3_88877847-9ca6-4f6b-b21a-90028a750ab9.jpg" alt="Haystack Rock">
             </div>
         </section>
     </main>
