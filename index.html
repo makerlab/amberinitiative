@@ -394,6 +394,37 @@
         .footer-faded {
             color: var(--footer-faded-color);
         }
+        .blog-posts {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .blog-post {
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--text-color);
+            padding-bottom: 20px;
+        }
+        .blog-post h2 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+        .post-meta {
+            font-style: italic;
+            color: var(--footer-faded-color);
+            margin-bottom: 15px;
+        }
+        .read-more {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 5px 10px;
+            border: 1px solid var(--text-color);
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .read-more:hover {
+            background-color: var(--text-color);
+            color: var(--bg-color);
+        }
         .contact-form {
             max-width: 600px;
             margin: 0 auto;
@@ -709,6 +740,36 @@ c39 -23 86 -50 104 -61 17 -10 32 -22 32 -27 0 -8 -176 -112 -212 -126 -17 -6
                 Our creative ecosystem evolves with people like you. It is people in place working together to serve their communities and living systems. Diverse scales of organizations come here to connect with each other. Let’s imagine, design, and create together.</p>
             </div>
         </section>
+    </main>
+    <main id="blog-section" style="display: none;">
+        <section style="margin:32px">
+            <center>
+            <div class="custom-hr"></div>
+            <h1 style="font-size:8em">BLOG</h1>
+            <div class="custom-hr"></div>
+            </center>
+            <div class="blog-posts">
+                <article class="blog-post">
+                    <h2>Regenerative Design: The Future of Sustainable Living</h2>
+                    <p class="post-meta">Posted on May 15, 2024 by Jane Doe</p>
+                    <p>In this post, we explore the principles of regenerative design and how they can be applied to create more sustainable and resilient communities...</p>
+                    <a href="#" class="read-more">Read More</a>
+                </article>
+                <article class="blog-post">
+                    <h2>The Power of Biodesign in Urban Environments</h2>
+                    <p class="post-meta">Posted on April 22, 2024 by John Smith</p>
+                    <p>Discover how biodesign is revolutionizing urban planning and architecture, creating cities that work in harmony with nature...</p>
+                    <a href="#" class="read-more">Read More</a>
+                </article>
+                <article class="blog-post">
+                    <h2>Community-Driven Conservation: A Case Study</h2>
+                    <p class="post-meta">Posted on March 10, 2024 by Emily Chen</p>
+                    <p>Learn about a successful community-led conservation project that's making a real difference in protecting local ecosystems...</p>
+                    <a href="#" class="read-more">Read More</a>
+                </article>
+            </div>
+       </section>
+    </main>
     <footer>
         <div class="footer-content">
             <div class="footer-left">
@@ -748,43 +809,29 @@ c39 -23 86 -50 104 -61 17 -10 32 -22 32 -27 0 -8 -176 -112 -212 -126 -17 -6
             </div>
         </div>
     </footer>
+</body>
+</html>
+
     <script>
+
         function handleRouting() {
             const path = window.location.pathname;
             const mainContent = document.getElementById('main-section');
             const aboutSection = document.getElementById('about-section');
             const blogSection = document.getElementById('blog-section');
-            const contactSection = document.getElementById('contact-section');
 
             mainContent.style.display = 'none';
             aboutSection.style.display = 'none';
             blogSection.style.display = 'none';
-            contactSection.style.display = 'none';
 
             if (path === '/about') {
                 aboutSection.style.display = 'block';
             } else if (path === '/blog') {
                 blogSection.style.display = 'block';
-            } else if (path === '/contact') {
-                contactSection.style.display = 'block';
             } else {
                 mainContent.style.display = 'block';
             }
         }
-
-        // Add event listener for form submission
-        document.getElementById('contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            // Here you would typically send the form data to a server
-            // For now, we'll just log it to the console
-            console.log('Form submitted:', {
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
-                message: document.getElementById('message').value
-            });
-            alert('Thank you for your message! We will get back to you soon.');
-            this.reset();
-        });
 
         // Run the routing function when the page loads
         window.addEventListener('load', handleRouting);
