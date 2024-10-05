@@ -566,6 +566,7 @@ c39 -23 86 -50 104 -61 17 -10 32 -22 32 -27 0 -8 -176 -112 -212 -126 -17 -6
 </li>                        
                     <li><a href="/" class="site-title">Amber Initiative</a></li>
                     <li><a href="/about">About</a></li>
+                    <li><a href="/blog">Blog</a></li>
                 </ul>
             </nav>
         </div>
@@ -719,13 +720,18 @@ c39 -23 86 -50 104 -61 17 -10 32 -22 32 -27 0 -8 -176 -112 -212 -126 -17 -6
             const path = window.location.pathname;
             const mainContent = document.getElementById('main-section');
             const aboutSection = document.getElementById('about-section');
+            const blogSection = document.getElementById('blog-section');
+
+            mainContent.style.display = 'none';
+            aboutSection.style.display = 'none';
+            blogSection.style.display = 'none';
 
             if (path === '/about') {
-                mainContent.style.display = 'none';
                 aboutSection.style.display = 'block';
+            } else if (path === '/blog') {
+                blogSection.style.display = 'block';
             } else {
                 mainContent.style.display = 'block';
-                aboutSection.style.display = 'none';
             }
         }
 
@@ -737,7 +743,6 @@ c39 -23 86 -50 104 -61 17 -10 32 -22 32 -27 0 -8 -176 -112 -212 -126 -17 -6
 
         // Intercept clicks on internal links
         document.addEventListener('click', function(e) {
-            console.log(e)
             if (e.target.tagName === 'A' && e.target.hostname === window.location.hostname) {
                 e.preventDefault();
                 const href = e.target.getAttribute('href');
