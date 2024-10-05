@@ -59,24 +59,18 @@
             background-color: var(--text-color);
             color: var(--bg-color);
         }
-        .donate-button {
-            background-color: #000000;
-            color: #ffffff;
-            padding: 0.5rem 1rem;
-            border: 2px solid transparent;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: border-color 0.3s ease;
+        .header-left {
+            display: flex;
+            align-items: center;
         }
-        .donate-button:hover {
-            border-color: #ffffff;
+        .header-left h1 {
+            margin-right: 1rem;
         }
         nav ul {
             list-style-type: none;
             padding: 0;
             margin: 0;
             display: flex;
-            justify-content: flex-start;
         }
         nav ul li {
             margin: 0 10px;
@@ -88,6 +82,18 @@
         }
         nav ul li a:hover {
             color: var(--nav-hover-color);
+        }
+        .donate-button {
+            background-color: #000000;
+            color: #ffffff;
+            padding: 0.5rem 1rem;
+            border: 2px solid transparent;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: border-color 0.3s ease;
+        }
+        .donate-button:hover {
+            border-color: #ffffff;
         }
         main {
             flex: 1;
@@ -250,12 +256,14 @@
 </head>
 <body>
     <header>
-        <h1>Amber Initiative</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-            </ul>
-        </nav>
+        <div class="header-left">
+            <h1>Amber Initiative</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </nav>
+        </div>
         <button class="donate-button">Donate</button>
     </header>
     <main>
