@@ -402,9 +402,6 @@
             <nav>
                 <ul>
                     <li>
-<?xml version="1.0" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
- "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
 <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
  width="32.000000pt" height="32.000000pt" viewBox="0 0 300.000000 300.000000"
  preserveAspectRatio="xMidYMid meet">
@@ -568,13 +565,13 @@ c39 -23 86 -50 104 -61 17 -10 32 -22 32 -27 0 -8 -176 -112 -212 -126 -17 -6
 </svg>
 </li>                        
                     <li><a href="/" class="site-title">Amber Initiative</a></li>
-                    <li><a href="#about">About</a></li>
+                    <li><a href="/about">About</a></li>
                 </ul>
             </nav>
         </div>
         <button class="donate-button">Donate</button>
     </header>
-    <main>
+    <main id="main-section">
         <section id="video-section">
             <div class="video-container">
                 <iframe src="https://www.youtube.com/embed/jgm58cbu0kw?autoplay=1&mute=1&loop=1&playlist=jgm58cbu0kw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -666,13 +663,18 @@ c39 -23 86 -50 104 -61 17 -10 32 -22 32 -27 0 -8 -176 -112 -212 -126 -17 -6
             </div>
         </section>
     </main>
-    <section id="about-section" style="display: none;">
-        <div class="story-container">
-            <h2>About Amber Initiative</h2>
-            <p>Amber Initiative is a community-driven organization dedicated to building regenerative economies and fostering creativity in the commons. We work on various projects that push the boundaries of design and empower local communities.</p>
-            <p>Our mission is to discover, co-create, and empower a community of creators who are passionate about building a sustainable future. Through our projects like Haystack Haven, Living Data Pod, Ocean Imagineer, and Nuxalk Rising, we strive to make a positive impact on both local and global scales.</p>
-        </div>
-    </section>
+    <main id="about-section" style="display: none;">
+        <section style="margin:32px">
+            <center>
+            <div class="custom-hr"></div>
+            <h1 style="font-size:8em">ABOUT</h1>
+            <div class="custom-hr"></div>
+            </center>
+            <div class="story-container">
+                <p>Stake with Nature. We distribute rewards to a network of biodesigned experiments working towards a regenerative and distributed future. We use life-centered design to foster cooperation between communities and the living systems they care for. Our mission is to connect resources to a collaborative network of committed citizens shaping a just and regenerative bio-economy.
+                Our creative ecosystem evolves with people like you. It is people in place working together to serve their communities and living systems. Diverse scales of organizations come here to connect with each other. Let’s imagine, design, and create together.</p>
+            </div>
+        </section>
     <footer>
         <div class="footer-content">
             <div class="footer-left">
@@ -715,7 +717,7 @@ c39 -23 86 -50 104 -61 17 -10 32 -22 32 -27 0 -8 -176 -112 -212 -126 -17 -6
     <script>
         function handleRouting() {
             const path = window.location.pathname;
-            const mainContent = document.querySelector('main');
+            const mainContent = document.getElementById('main-section');
             const aboutSection = document.getElementById('about-section');
 
             if (path === '/about') {
@@ -735,6 +737,7 @@ c39 -23 86 -50 104 -61 17 -10 32 -22 32 -27 0 -8 -176 -112 -212 -126 -17 -6
 
         // Intercept clicks on internal links
         document.addEventListener('click', function(e) {
+            console.log(e)
             if (e.target.tagName === 'A' && e.target.hostname === window.location.hostname) {
                 e.preventDefault();
                 const href = e.target.getAttribute('href');
