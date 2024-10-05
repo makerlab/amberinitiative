@@ -418,12 +418,24 @@
             margin-top: 10px;
             padding: 5px 10px;
             border: 1px solid var(--text-color);
-            text-decoration: none;
+            background-color: transparent;
+            color: var(--text-color);
+            cursor: pointer;
             transition: background-color 0.3s, color 0.3s;
         }
         .read-more:hover {
             background-color: var(--text-color);
             color: var(--bg-color);
+        }
+        .blog-content {
+            margin-bottom: 15px;
+        }
+        .expanded-content {
+            margin-top: 15px;
+        }
+        .expanded-content ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
         }
         .contact-form {
             max-width: 600px;
@@ -752,20 +764,56 @@ c39 -23 86 -50 104 -61 17 -10 32 -22 32 -27 0 -8 -176 -112 -212 -126 -17 -6
                 <article class="blog-post">
                     <h2>Regenerative Design: The Future of Sustainable Living</h2>
                     <p class="post-meta">Posted on May 15, 2024 by Jane Doe</p>
-                    <p>In this post, we explore the principles of regenerative design and how they can be applied to create more sustainable and resilient communities...</p>
-                    <a href="#" class="read-more">Read More</a>
+                    <div class="blog-content">
+                        <p>In this post, we explore the principles of regenerative design and how they can be applied to create more sustainable and resilient communities. Regenerative design goes beyond sustainability by actively improving the environment and ecosystems it interacts with.</p>
+                        <div class="expanded-content" style="display: none;">
+                            <p>Key principles of regenerative design include:</p>
+                            <ul>
+                                <li>Whole systems thinking</li>
+                                <li>Integrating with local ecosystems</li>
+                                <li>Promoting biodiversity</li>
+                                <li>Enhancing human and environmental health</li>
+                            </ul>
+                            <p>By implementing these principles, we can create buildings and communities that not only reduce their environmental impact but actively contribute to the health of the planet. This approach is crucial for addressing climate change and ensuring a sustainable future for generations to come.</p>
+                        </div>
+                    </div>
+                    <button class="read-more">Read More</button>
                 </article>
                 <article class="blog-post">
                     <h2>The Power of Biodesign in Urban Environments</h2>
                     <p class="post-meta">Posted on April 22, 2024 by John Smith</p>
-                    <p>Discover how biodesign is revolutionizing urban planning and architecture, creating cities that work in harmony with nature...</p>
-                    <a href="#" class="read-more">Read More</a>
+                    <div class="blog-content">
+                        <p>Discover how biodesign is revolutionizing urban planning and architecture, creating cities that work in harmony with nature. Biodesign integrates living organisms and biological processes into the built environment, offering innovative solutions to urban challenges.</p>
+                        <div class="expanded-content" style="display: none;">
+                            <p>Some exciting applications of biodesign in urban environments include:</p>
+                            <ul>
+                                <li>Living buildings with algae facades for air purification</li>
+                                <li>Mycoremediation for soil and water cleanup</li>
+                                <li>Biomimetic materials inspired by nature's efficiency</li>
+                                <li>Urban food forests and vertical gardens</li>
+                            </ul>
+                            <p>These innovations not only improve the ecological footprint of our cities but also enhance the quality of life for urban dwellers. As we face increasing urbanization and environmental pressures, biodesign offers a path towards more resilient and sustainable urban futures.</p>
+                        </div>
+                    </div>
+                    <button class="read-more">Read More</button>
                 </article>
                 <article class="blog-post">
                     <h2>Community-Driven Conservation: A Case Study</h2>
                     <p class="post-meta">Posted on March 10, 2024 by Emily Chen</p>
-                    <p>Learn about a successful community-led conservation project that's making a real difference in protecting local ecosystems...</p>
-                    <a href="#" class="read-more">Read More</a>
+                    <div class="blog-content">
+                        <p>Learn about a successful community-led conservation project that's making a real difference in protecting local ecosystems. This case study demonstrates the power of grassroots initiatives in environmental stewardship.</p>
+                        <div class="expanded-content" style="display: none;">
+                            <p>The project, located in coastal Oregon, focuses on restoring and protecting a critical estuary habitat. Key elements of the project include:</p>
+                            <ul>
+                                <li>Community engagement and education programs</li>
+                                <li>Collaborative partnerships with local indigenous groups</li>
+                                <li>Innovative funding models combining public and private resources</li>
+                                <li>Adaptive management strategies based on ongoing scientific monitoring</li>
+                            </ul>
+                            <p>This case study highlights how community-driven initiatives can achieve significant conservation outcomes while also fostering social cohesion and economic benefits. It serves as an inspiring model for other communities looking to take an active role in protecting their local environments.</p>
+                        </div>
+                    </div>
+                    <button class="read-more">Read More</button>
                 </article>
             </div>
        </section>
@@ -824,9 +872,9 @@ c39 -23 86 -50 104 -61 17 -10 32 -22 32 -27 0 -8 -176 -112 -212 -126 -17 -6
             aboutSection.style.display = 'none';
             blogSection.style.display = 'none';
 
-            if (path === '/about') {
+            if (path.endsWith('about')) {
                 aboutSection.style.display = 'block';
-            } else if (path === '/blog') {
+            } else if (path.endsWith('blog')) {
                 blogSection.style.display = 'block';
             } else {
                 mainContent.style.display = 'block';
@@ -847,6 +895,24 @@ c39 -23 86 -50 104 -61 17 -10 32 -22 32 -27 0 -8 -176 -112 -212 -126 -17 -6
                 window.history.pushState(null, '', href);
                 handleRouting();
             }
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const readMoreButtons = document.querySelectorAll('.read-more');
+            readMoreButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const article = this.closest('.blog-post');
+                    const expandedContent = article.querySelector('.expanded-content');
+                    if (expandedContent.style.display === 'none') {
+                        expandedContent.style.display = 'block';
+                        this.textContent = 'Read Less';
+                    } else {
+                        expandedContent.style.display = 'none';
+                        this.textContent = 'Read More';
+                    }
+                });
+            });
         });
     </script>
 </body>
