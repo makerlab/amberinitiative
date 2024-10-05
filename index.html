@@ -322,6 +322,25 @@
         a:hover::after {
             transform: scaleX(1);
         }
+        #mission-statement {
+            padding: 4rem 2rem;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+        .mission-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        #mission-statement h2 {
+            font-size: 2.5vw;
+            line-height: 1.4;
+            text-align: center;
+        }
+        @media (max-width: 768px) {
+            #mission-statement h2 {
+                font-size: 5vw;
+            }
+        }
     </style>
 </head>
 <body>
@@ -343,6 +362,11 @@
                 <div class="video-overlay">
                     <h1>Amber Initiative</h1>
                 </div>
+            </div>
+        </section>
+        <section id="mission-statement">
+            <div class="mission-container">
+                <h2>Discover, co-create and empower a community of creators building regenerative economies. Push the boundaries of design and unleash the creativity of the commons.</h2>
             </div>
         </section>
         <section id="haystack-story">
