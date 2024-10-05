@@ -1,0 +1,44 @@
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --header-bg-color: #ffffff;
+    --header-text-color: #333333;
+    --nav-bg-color: #333333;
+    --nav-text-color: #ffffff;
+    --nav-hover-color: #4CAF50;
+    --footer-faded-color: #888888;
+    --hamburger-color: #333333;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #011215;
+        --text-color: #ffffff;
+        --header-bg-color: #011215;
+        --header-text-color: #ffffff;
+        --nav-bg-color: #1a1a1a;
+        --nav-text-color: #ffffff;
+        --nav-hover-color: #4CAF50;
+        --footer-faded-color: #aaaaaa;
+    }
+}
+
+body {
+    font-family: satoshi, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* Rest of the CSS content */
+/* ... */
+
+.contact-form button:hover {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
