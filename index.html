@@ -251,24 +251,31 @@
         }
         .story-text {
             text-align: left;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
         }
         .story-text h2 {
             font-size: 2rem;
             margin-bottom: 0.5rem;
+            align-self: flex-start;
         }
         .story-text h3 {
             font-size: 1.5rem;
             margin-bottom: 0.5rem;
+            align-self: flex-start;
         }
         .story-text hr {
             border: none;
             border-top: 1px solid var(--text-color);
             margin: 1rem 0;
             width: 100%;
+            align-self: stretch;
         }
         .story-text p {
             font-size: 1.2rem;
             line-height: 1.6;
+            align-self: flex-start;
         }
         .story-image img {
             width: 100%;
