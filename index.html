@@ -60,21 +60,16 @@
             color: var(--bg-color);
         }
         .donate-button {
-            background-color: var(--nav-hover-color);
-            color: var(--header-text-color);
+            background-color: #000000;
+            color: #ffffff;
             padding: 0.5rem 1rem;
-            border: none;
+            border: 2px solid transparent;
             border-radius: 5px;
             cursor: pointer;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-        header:hover .donate-button {
-            background-color: var(--bg-color);
-            color: var(--text-color);
+            transition: border-color 0.3s ease;
         }
         .donate-button:hover {
-            background-color: var(--nav-hover-color) !important;
-            color: var(--header-text-color) !important;
+            border-color: #ffffff;
         }
         nav ul {
             list-style-type: none;
