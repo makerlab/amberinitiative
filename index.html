@@ -310,6 +310,23 @@
             width: 100%;
             padding: 1rem;
         }
+        .pod-text {
+            text-align: left;
+        }
+        .pod-text h2 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        .pod-text h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .pod-text hr {
+            border: none;
+            border-top: 1px solid var(--text-color);
+            margin: 1rem 0;
+            width: 100%;
+        }
         .pod-text p {
             font-size: 1.2rem;
             line-height: 1.6;
@@ -329,7 +346,8 @@
             }
             .pod-text {
                 display: flex;
-                align-items: center;
+                flex-direction: column;
+                justify-content: center;
             }
         }
         a {
@@ -413,11 +431,11 @@
             </div>
         </section>
         <section id="living-data-pod">
-            <div class="story-container reverse">
-                <div class="story-image">
+            <div class="pod-container">
+                <div class="pod-image">
                     <img src="https://images.squarespace-cdn.com/content/v1/5ee2e063811fd621570b4704/b119aef3-3876-4ffe-981f-5746ee5e52f7/living+data+pod+draft+5-01.jpg" alt="Living Data Pod">
                 </div>
-                <div class="story-text">
+                <div class="pod-text">
                     <h2>LIVING DATA POD</h2>
                     <hr>
                     <h3>San Francisco, CA</h3>
