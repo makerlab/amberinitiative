@@ -1,0 +1,88 @@
+#### lets make an index.html with a simple mobile friendly website  
+#### lets add a sticky header and a nice footer  
+#### lets add light/dark mode that observes the system settings  
+#### Instead of "Welcome to my website" let's call it "Amber Initiative" - and also lets make the banner smaller, more like a navigation bar - and on the right side of the banner lets have a donate button.  
+#### lets make the banner the same color as the color mode, and lets have a rollover hover that reverses the color when the mouse is on top of the banner  
+#### in the body section lets remove this text completely: "Home  
+#### Welcome to our simple, mobile-friendly website. This site is designed to look great on both desktop and mobile devices.  
+####   
+#### About  
+#### We are a company dedicated to creating responsive and user-friendly web experiences.  
+####   
+#### Contact  
+#### Get in touch with us at: contact@example.com" and lets replace it a full width region that has a background video that autoplays - if you can use this video it would be a good test "https://youtu.be/jgm58cbu0kw?si=nxaWqhKFdKxnKB6b"  
+#### lets make the iframe full width and some reasonable height  
+#### hmm,, the section with video in it appears to be limited in width - can we try harder to make it full width of the display?  
+#### lets try add a new section that we can call haystack-story - i want this to be two columns, split 50/50 on wider displays, and on the left is a paragraph containing a story - we can use "haystack rock has been an indigenous tribal meeting place for many centuries" and on the right i will have a large image - we can use this url for the image for now "https://assets.simpleviewinc.com/simpleview/image/upload/c_limit,h_1200,q_75,w_1200/v1/clients/cannonbeachor/Haystack_for_SpinlerCreative_1_of_1_3_88877847-9ca6-4f6b-b21a-90028a750ab9.jpg"  
+#### the haystack rock section should have the text on the left and the image on the right - split 50/50 - although on mobile displays we will want to have these be above and below each other if the display width is below 800px  
+#### lets add another new section called living-data-pod and it is similar to the previous section except that i want the image on the left this time and the text on the right. for an image we can use this url "https://images.squarespace-cdn.com/content/v1/5ee2e063811fd621570b4704/b119aef3-3876-4ffe-981f-5746ee5e52f7/living+data+pod+draft+5-01.jpg" and for text we can use "the living data pod is a system of tracking the movement of life"  
+#### lets add another new section called nuxalt-rising where the text on the left says "the nuxalt are an indigenous tribe" and on the right the image url can be "https://upload.wikimedia.org/wikipedia/commons/d/db/Eulichan_Stink_Box.jpg"  
+#### i want to clear the content in the footer - instead i want the footer to consist of two regions on the left and one region on the right, with flexible empty space in the middle, and the leftmost region should have the word "Foundation" in it in bold, and the second region should have the word "Contribute" in bold, and the rightmost region should have the word "stay up to date" in bold.  
+#### in the footer foundation column i want a link to "/about" and a link to "/blog"  
+#### in the footer second column i want a link to opencollective and a link to gitcoin  
+#### in the rightmost column I want to replace "stay up to date" with "Contact us" and below that four links - but i want these links to all be simple emoji, packed side by side, rather than as a list, and the four links should go to twitter.com/amberinitiative, instagram.com/amberinitative, youtube.com/amberinitative, vimeo.com/amberinitiative - just pick emoji that feel appropriate  
+#### in the banner/navigation area let's get rid of the link to "home" and "contact" - keeping only "about"  
+#### although i like the day/night mode responsiveness, lets make the donate button not be responsive, and stay black with white text, also i want rollover hover on the donate button to turn the border white  
+#### right now the about link in the banner is centered, i want it to be more to the left  
+#### hmm, the about link did not move more to the left. generally speaking the banner should consist of three elements, "Amber Initiative" on the left as it has now, and then "about" next to it, and then on the far right, right justified is the donate button - as it is now. We need a way (possibly using flexbox) to have the about button more to the left.  
+#### in the navigation lets make the term "Amber Initiative" and "about" the same size font more similar to the size of the about, and lets have the term "amber initiative" become a link to "/"  
+#### lets use an underline for links in general  
+#### actually lets use rollover hover underline that only shows the underline whlie the mouse is over the link, also lets not have a color change rollover hover on links  
+#### in the navigation lets reduce the font size a bit overall, and remove the bold from "amber initiative", and lets increase the general vertical size of the navigation/banner area a bit  
+#### lets make the donate button element wider  
+#### lets turn off the rounded boxes on the donate button  
+#### in the top section that has the background video i want to horizontally and vertically the words "Amber Initiative" in a very large black font overtop of the video.  
+#### lets make the font about twice as large for that overlay and lets also have 100% transparency on the backdrop rather than the semi-transparent backdrop  
+#### lets insert a section after the top section that has just this text in it in a very large font "Discover, co-create and empower a community of creators building regenerative economies. Push the boundaries of design and unleash the creativity of the commons."  
+#### can we change the font in all the body sections to be the one from this snippet: ".font-sans {  
+####     font-family: satoshi, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;  
+#### }"  
+#### lets add the font itself to the imports - this is a snippet i found that may do this : <link href="https://fonts.cdnfonts.com/css/satoshi" rel="stylesheet">  
+####  
+#### let's polish the prose in the haystack-story section  - the real prose we will use is "HAYSTACK HAVEN  
+#### Cannon Beach  
+#### Nestled in the heart of Cannon Beach, Oregon. Haystack Haven is a four-acre mature forest, overlooking the iconic Haystack Rock and serves as a new model to reimagine the relationship between development and ecological stewardship." . we are going to use the same pattern for all of the prose sections eventually. In this case "HAYSTACK HAVEN" is on a line by itself, and is about 4 times the size of normal text, and then I have a horizontal line underneath that that the full width of the text section, and then underneath that is "Cannon Beach" about twice as large as ordinary text, then another line underneath that, and then the bulk of the prose starting with "Nestled..."  
+#### the story-text div for some reason is not respecting the normal line break that a h2 or other tag would normally apply - it may be setup as some kind of flex region or something - because the three text elements are side by side rather than vertical, also the <hr> simply is not showing up for some reason .  
+#### this looks good, but the font sizes i chose were too large, lets reduce the "HAYSTACK HAVEN" to 2x, and also lets left justify the text rather than center it  
+#### lets left justify "HAYSTACK HAVEN" and "Cannon Beach" - they appear to not have been left justified for some reason - something must be centering them in the column layout.  
+#### interestingly the "HAYSTACK HAVEN" and "Cannon Beach" are still not left justified - when i inspect this with the browser inspector i see it is because their containers are centered - although we want a flex column layout for these elements, the elements must be left justified it looks like - not just the text inside each element.  
+#### unfortunately the text is not left justified. what if we don't use a flex column but just a more conventional layout since normally elements separated by <br> will be vertically left aligned  
+#### hmm, all three elements in the text area are being laid out side by side.  
+#### ok this is good - the second section has a similar treatment - and this is the real text for it: "LIVING DATA POD  
+#### San Francisco, CA  
+#### The Living Data Pod is an autonomous floating platform designed to provide agency to local communities to test water quality and monitor ecological health. A central bio-material enclosure houses a “Planktonscope”, an open source imaging platform for citizen oceanography adapted to transmit visual data to local coastal communities."  
+#### this is good except that in the second section i want to visually have the image on the left and the text on the right as a form of visual relief to avoid monotony.  
+#### unfortunately the previous attempt didn't work - in the second section (living-data-pod i want the image on the left and the text on the right - any idea why this did not work?  
+#### ok that is good - the third section is similar to the first section with the text on the left and the image on the right, but now we can use the real text instead of placeholder text, and follow the same pattern as the first section - the real text is "NUXALK RISING  
+#### Bella Coola, B.C.  
+#### Our vision is for Nuxalkmc to grow up in our home villages, eating our foods, speaking our language and living our culture for our entire lives."  
+#### ok that is good. in the footer we have three sections, right now text in these sections is centered within each section, i want text to be left justified within each section.  
+#### i want open collective to link to "https://opencollective.com/amberinitiative"  
+#### i want gitcoin to link to "https://gitcoin.co/amberinitiative"  
+#### in the third section on nuxalt-rising i want the image to send you to the url "https://vimeo.com/752728951" when you click on it  
+#### I also think it would be nice to have the "NUXALT RISING" also be a link to the same url  
+#### i want to better approximate the exact font and style - can we change the h2 font in the sections to "satoshi,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif" with a specific font size of 40px?  
+#### somehow the font seems thicker, can we make it thinner?  
+#### <blank>  
+#### lets reduce the font weight only in the sections h2 - lets try make it substantially thinner as a test  
+#### the section h2 seem to have a substantial top margin - can this be reduced  
+#### lets not use the <hr> tag at all but make up our own single line div class style that is full width and uses border to approximate hr  
+#### i want the footer area to not be black by default but to be similar to the banner/navigation area in that it is the same color as the rest of the display in the dark/light mode but when you rollover it with a rollover hover it turns the opposite color - exactly the same as the header does  
+#### this is good. in the footer area there are three columns, i want the top line of each of those columns to remain the same but i want the content below those to be a bit greyer or more faded  
+#### lets add a fourth section in the main body area - this section will be split into an image area and a text area, but we will just leave the image area empty, and have this quote for the text portion "The ultimate hidden truth of the world is that it is something we make and could just as easily make differently.  
+#### - David Graeber, Utopia of Rules"  
+#### lets add another section and just reuse one of the existing image links and have this text "OCEAN IMAGINEER  
+#### Hong Kong  
+#### The Ocean Imagineer is a floating oyster hatchery and solar hydrogen production plant pilot project. We are building a floating oyster hatchery and setting it up in North point. On the roof, solar panels will power the production of hydrogen, the cleanest fuel for the future."  
+#### now i want to do something a little bit fancy. i want a bit of javascript at the bottom that peeks at the current url, if the url path component is "/about" then i want to dynamically swap out the <main> section for a hidden section that will have some about information. effectively i want to build a poor mans router directly into the website, so that although it is largely static it will be able to handle single page routing to the about page.  
+#### lets add a route for a blog main area also and add some fake blog content to that  
+#### /undo  
+#### lets try this again - lets add another main section for a blog region - lets keep it empty - just add a header that says "BLOG"  
+#### <blank>  
+#### <blank>  
+#### lets stuff some fake content into the blog section  
+#### in the blog section in /index.html there are buttons to "read more" - it would be fun to have this expand the article in place rather than be an incomplete stub that links somewhere else - also please feel free to flesh out the articles a little bit more in this case.  
+#### /add index.html  
+#### <blank>  
+#### please go ahead and make the changes  
+#### these are great, lets add a few more articles, lets make sure to add one about coastal economies and coral reef marine ecosystem restoration, as well as one about bamboo harvesting as an alternative to traditional timber practices  
